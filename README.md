@@ -87,20 +87,20 @@ title 'my great view'
 
 def default_meta_tags
   {
-    title: '',
-    description: '',
-    keywords: '',
-    separator: "".html_safe,
+    title: 'Member Login',
+    description: 'Member login page.',
+    keywords: 'Site, Login, Members',
+    separator: "&mdash;".html_safe,
   }
 end
 
-set_meta_tags title: ''
-set_meta_tags site: '', title: ''
-set_meta_tags site: '', title: '', reverse: true
+set_meta_tags title: 'Member Login'
+set_meta_tags site: 'Site Title', title: 'Member Login'
+set_meta_tags site: 'Site Title', title: 'Member Login', reverse: true
 
 set_meta_tags description: "All text about keywords, other keywords"
 
-set_meta_tags keywords: %w[]
+set_meta_tags keywords: %w[keyword1 Keyowrd2 Keyword3]
 
 set_meta_tags noindex: true
 set_meta_tags noindex: 'googlebot'
@@ -111,18 +111,18 @@ set_meta_tags nofollow: true
 set_meta_tags nofollow: 'googlebot'
 
 set_meta_tags noindex: true, follow: true
-set_meta_tags canonical: ""
+set_meta_tags canonical: "http://yoursite.com/canonical/url"
 
 set_meta_tags icon: '/favicon.ico'
-set_meta_tags icon: '', type: ''
+set_meta_tags icon: '/favicon.png', type: 'image/png'
 set_meta_tags icon: [
-  {},
-  {}
+  { href: '/images/icon_96.png', sizes: '32x32 96x96', type: 'image/png' },
+  { href: '/images/icons/icon_itouch_precomp_32.png', rel: 'apple-touch-icon-precomposed', sizes: '32x32', type: 'image/png' }
 ]
 
-set_meta_tags alternate: { "" => "" }
-set_meta_tags alternate: { "" => "",
-                           "" => "" }
+set_meta_tags alternate: { "fr" => "http://yoursite.fr/alternate/url" }
+set_meta_tags alternate: { "fr" => "http://yoursite.fr/alternate/url",
+                           "de" => "http://yoursite.de/alternate/url" }
 
 set_meta_tags alternate: [
   { href: 'http://example.fr/base/url', hreflang: 'fr' },
@@ -152,31 +152,31 @@ set_meta_tags foo: {
 }
 
 set_meta_tags og: {
-  image: ["", ""]
+  image: ["http://example.com/rock.jpg", "http://example.com/rock2.jpg"]
 }
 
 set_meta_tags og: {
-  title: '',
-  type: '',
-  url: '',
-  image: '',
+  title: 'The Rock',
+  type: 'video.movie',
+  url: 'http://www.imdb.com/title/tt0117500/',
+  image: 'http://ia.media-imdb.com/rock.jpg',
   video: {
-    director: '',
-    writer: ['', '']
+    director: 'http://www.imdb.com/name/nm0000881/',
+    writer: ['http://www.imdb.com/name/nm0918711/', 'http://www.imdb.com/name/nm0177018/']
   }
 }
 
 set_meta_tags og: {
-  title: '',
-  type: '',
-  url: '',
+  title: 'Two structured image properties',
+  type: 'website',
+  url: 'view-source:http://examples.opengraphrotocol.us/image-array.html',
   image: [{
-    _: '',
+    _: 'http://examples.opengraphprotocol.us/media/images/75.png',
     width: 75,
     height: 75,
   },
   {
-    _: '',
+    _: 'http://examples.opengraphprotocol.us/media/images/50.png',
     width: 50,
     height: 50,
   }]
@@ -191,7 +191,7 @@ set_meta_tags article: {
 
 set_meta_tags twitter: {
   card: "summary",
-  site: "@usernaem"
+  site: "@username"
 }
 
 set_meta_tags twitter: {
